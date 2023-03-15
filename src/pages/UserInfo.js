@@ -1,12 +1,12 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import NotFound from "./NotFound";
 
 const UserInfo = () => {
   const { username } = useParams();
-  const navigate = useNavigate();
   const { users } = useSelector((state) => state.users);
+
+  const navigate = useNavigate();
 
   //retrieve stored user if present
   const storedUser = JSON.parse(localStorage.getItem("currentUser"));

@@ -11,16 +11,16 @@ const SearchBar = ({ users, handleSearch }) => {
 
   const [panelIsOpen, setPanelIsOpen] = useState(false);
 
+  const handleToggleOption = (e) => {
+    setPanelIsOpen(e.target.checked);
+  };
+
   const handleSearchTermsChange = (e) => {
     const { name, value } = e.target;
     setSearchTerms((searchTerms) => ({
       ...searchTerms,
       [name]: value,
     }));
-  };
-
-  const handleToggleOption = (e) => {
-    setPanelIsOpen(e.target.checked);
   };
 
   const handleReset = () => {

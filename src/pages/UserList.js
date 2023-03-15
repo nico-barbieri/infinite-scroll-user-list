@@ -17,10 +17,6 @@ import { ReactComponent as LoaderAnimation } from "../res/icons/loader.svg";
 const UserList = () => {
   const { users, error, isLoading } = useSelector((state) => state.users);
 
-/*   const [users, setUsers] = useState([]);
-  const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(false); */
-
   const [page, setPage] = useState(1);
   const [usersPerPage, setUsersPerPage] = useState(50);
   
@@ -32,6 +28,7 @@ const UserList = () => {
 
   const observer = useRef();
 
+  //function to check if the last element is in the viewport
   const lastElement = useCallback(element => {
     //check if the new page is loading to prevent unwanted calls
     if (isLoading) return
@@ -48,6 +45,8 @@ const UserList = () => {
     if (element) observer.current.observe(element);
   }, [isLoading]);
 
+
+  //DATA FETCHING
   const fetchUsers = async () => {
     dispatch(startRequest());
     try {
@@ -55,23 +54,23 @@ const UserList = () => {
         `https://randomuser.me/api/?page=${page}&results=${usersPerPage}&seed=123456789`
       );
       dispatch(setUsers([...users, ...response.data.results]))
-      /* setUsers((users) => [...users, ...response.data.results]);
-      setError(null); */
     } catch (error) {
       console.log("An error occurred");
-      /* setError(error); */
       dispatch(setError(error));
     }
   };
 
+  //When page value change (incremented) more users are loaded
   useEffect(() => {
     fetchUsers();
   }, [page]);
 
+  //set default searchResult value equal to "unfiltered" users
   useEffect(() => {
     setSearchResults([...users]);
   }, [users]);
 
+  //add an event listener when the component is mounted to dinamically set the margin top of the page, based on navbar and searchbar heights
   useEffect(()=>{
     const adaptTopMargin = () => {
         const navHeight = document.querySelector('header').offsetHeight;
@@ -86,6 +85,7 @@ const UserList = () => {
     return () => window.removeEventListener('resize', adaptTopMargin);
   }, [])
 
+  
   const handleSearch = (filtered) => {
     setSearchResults(filtered);
   };

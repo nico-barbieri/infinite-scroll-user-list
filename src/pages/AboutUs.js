@@ -1,8 +1,4 @@
 function AboutUs() {
-  const handleClearLocal = () => {
-    localStorage.removeItem("users")
-  }
-
   return (
     <div className="page-container">
       <div className="about-container">
