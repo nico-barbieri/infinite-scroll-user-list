@@ -1,0 +1,267 @@
+@import "utilities/variables";
+
+//searchbar
+.search-section {
+    position: fixed;
+    top: 4rem;
+    width: 100%;
+    height: max-content;
+    background: $secondary;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    gap: 1rem;
+    padding: 1rem;
+    z-index: 100;
+  
+    * {
+      flex: 1 1;
+    }
+  
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 5%;
+      height: 1px;
+      width: 90%;
+      background: $primary;
+      opacity: 0.66;
+    }
+  
+    .options-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 3;
+      gap: 1rem;
+    }
+  
+    input,
+    button,
+    select {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.125rem 1ch;
+      border: 1px solid $primary;
+      border-radius: 0;
+      outline: transparent;
+      color: $primary;
+      background: transparent;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+  
+      svg {
+        margin: 0 1ch;
+        max-height: 2ch;
+        max-width: 2ch;
+        * {
+          stroke: $primary;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+  
+      &::placeholder {
+        color: $primary;
+        opacity: 0.66;
+      }
+  
+      &:hover {
+        color: $accent;
+        border-color: $accent;
+  
+        input::placeholder {
+          color: $accent !important;
+        }
+        svg {
+          * {
+            stroke: $accent;
+          }
+        }
+      }
+    }
+  
+    input {
+      &:focus-within {
+        color: $primary;
+        background: $secondary-lighter;
+        border-color: $primary;
+        svg {
+          * {
+            stroke: $accent;
+          }
+        }
+      }
+    }
+  
+    select {
+      &::-ms-expand {
+        display: none;
+      }
+      option {
+        background: $secondary;
+        color: $primary;
+      }
+    }
+  
+    button {
+      &:active {
+        background: $secondary-lighter;
+        border-color: $primary !important;
+        color: $primary;
+        transition: 0s;
+        svg {
+          * {
+            stroke: $primary;
+            transition: 0s;
+          }
+        }
+      }
+    }
+  
+    .show-options {
+      position: relative;
+      flex: 0 1;
+      input {
+        width: 2rem;
+        height: 2rem;
+        opacity: 0;
+        z-index: 10;
+        &:checked ~ svg {
+          rotate: 30deg;
+        }
+      }
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2rem;
+        pointer-events: none;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+  
+  //user list
+  .user-cards {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+    .user-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      width: 10rem;
+      padding: 1rem;
+  
+      background: $secondary;
+      color: $primary;
+      border: 1px solid $primary;
+      box-shadow: 0px 10px 15px -2px rgba(0, 0, 0, 0.1);
+  
+      transition: all ease-in-out 0.2s;
+  
+      &:hover {
+        box-shadow: 0px 10px 15px -2px rgba(0, 0, 0, 0.1),
+          inset 0 0.5rem 0 0 $accent, inset 0 -0.5rem 0 0 $accent;
+  
+        .user-propic-wrapper {
+          img {
+            scale: 1.05;
+          }
+        }
+  
+        .user-info {
+          position: relative;
+          overflow: hidden;
+          .user-name {
+            position: relative;
+            overflow: visible;
+            text-overflow: unset;
+            animation: carousel linear 4s -2s infinite;
+          }
+        }
+      }
+  
+      .user-propic-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        width: 8rem;
+        height: 8rem;
+        overflow: hidden;
+        border: 2px solid $primary;
+        border-radius: 50%;
+  
+        margin: 0 0.5rem 1rem 0.5rem;
+        transition: all 0.2s ease-in-out;
+  
+        img {
+          opacity: 0.9;
+          object-fit: cover;
+          object-position: center;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+      .user-info {
+        width: 100%;
+        .user-name {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          translate: 0 0;
+          transition: all 0.2s ease-in-out;
+        }
+        .user-location {
+          font-size: 0.75rem;
+        }
+      }
+      .user-cta {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-bottom: -0.5rem;
+  
+        .user-email {
+          fill: $primary;
+          transition: all 0.2s ease-in-out;
+  
+          &:hover {
+            fill: $accent;
+          }
+        }
+  
+        button {
+          background: transparent;
+          stroke: $primary;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+  
+          &:hover {
+            stroke: $accent;
+          }
+        }
+  
+        svg {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+      }
+    }
+  }
+  
+  .loader-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    svg {
+      margin: 0 auto;
+    }
+  }

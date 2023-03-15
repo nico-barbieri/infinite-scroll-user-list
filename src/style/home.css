@@ -1,0 +1,45 @@
+.landing-container {
+  margin-top: -4rem;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing-container .landing-wrapper {
+  padding: 2rem;
+  display: flex;
+  gap: 4rem;
+  align-items: stretch;
+  flex-wrap: wrap;
+  max-width: 90rem;
+}
+.landing-container .landing-wrapper .landing-header {
+  flex: 2;
+  min-width: 15rem;
+}
+.landing-container .landing-wrapper .landing-header h1 {
+  font-weight: 600;
+  font-size: clamp(3.5rem, 10vw - 1rem, 8rem);
+  line-height: 1.5;
+}
+.landing-container .landing-wrapper .landing-header h1 span {
+  font-weight: 100;
+  border: 0.25rem solid #f5f4f2;
+  padding: 0 0.5ch;
+}
+.landing-container .landing-wrapper .landing-header h2 {
+  margin-top: 1rem;
+  font-weight: 100;
+  font-size: clamp(1.5rem, 3vw - 1rem, 5rem);
+}
+.landing-container .landing-wrapper .landing-desc {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 15rem;
+  font-weight: 100;
+  border-left: 1px solid #f5f4f2;
+  padding-left: 2rem;
+  font-size: clamp(1rem, 1.75vw - 0.25rem, 2rem);
+}/*# sourceMappingURL=home.css.map */

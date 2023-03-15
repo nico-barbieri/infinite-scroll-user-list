@@ -1,0 +1,22 @@
+@-webkit-keyframes carousel {
+  0% {
+    translate: 10rem 0;
+  }
+  50% {
+    translate: 0rem 0;
+  }
+  100% {
+    translate: -10rem 0;
+  }
+}
+@keyframes carousel {
+  0% {
+    translate: 10rem 0;
+  }
+  50% {
+    translate: 0rem 0;
+  }
+  100% {
+    translate: -10rem 0;
+  }
+}/*# sourceMappingURL=animations.css.map */

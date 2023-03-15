@@ -1,0 +1,63 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: #14171f;
+  color: #f5f4f2;
+  padding: 1rem 2rem;
+}
+.navbar-container .navbar-wrapper .navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-container .navbar-wrapper .navbar .navbar-logo {
+  cursor: pointer;
+}
+.navbar-container .navbar-wrapper .navbar .navbar-logo h3 {
+  font-size: 1.5rem;
+}
+.navbar-container .navbar-wrapper .navbar .navbar-logo h3 span {
+  font-weight: 300;
+  border: 1px solid #f5f4f2;
+  padding: 0 0.5ch;
+}
+.navbar-container .navbar-wrapper .navbar .navbar-links {
+  display: flex;
+  gap: 2ch;
+  align-items: center;
+}
+.navbar-container .navbar-wrapper .navbar .navbar-links li a {
+  display: flex;
+  gap: 0.5ch;
+  align-items: center;
+}
+.navbar-container .navbar-wrapper .navbar .navbar-links li a span {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.navbar-container .navbar-wrapper .navbar .navbar-links li a span::after {
+  content: "";
+  position: absolute;
+  height: 0.25rem;
+  width: 0;
+  bottom: -0.25rem;
+  right: 50%;
+  translate: 50% 0;
+  background: #f5f4f2;
+  transition: all 0.2s ease-in-out;
+}
+.navbar-container .navbar-wrapper .navbar .navbar-links li a span:hover::after {
+  width: 33%;
+}
+.navbar-container .navbar-wrapper .navbar .navbar-links li a.active span {
+  color: hwb(220 32% 12%);
+}
+.navbar-container .navbar-wrapper .navbar .navbar-links li a.active span::after {
+  background: hwb(220 32% 12%);
+  width: 100%;
+}
+.navbar-container .navbar-wrapper .navbar .navbar-links li a svg {
+  height: 1.25rem;
+}/*# sourceMappingURL=navbar.css.map */

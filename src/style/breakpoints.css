@@ -1,0 +1,65 @@
+@media (hover: none) {
+  /* remove hover effects if not supported */
+  .li a:hover::after {
+    width: inherit !important;
+  }
+  .user-card:hover {
+    box-shadow: 0px 10px 15px -2px rgba(0, 0, 0, 0.1) !important;
+  }
+  .user-card:hover img {
+    scale: inherit !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+  .desktop-only {
+    display: none;
+  }
+  .search-section {
+    gap: 0;
+  }
+  .search-section button[name=reset] {
+    margin-right: 1rem;
+  }
+  .search-section .options-wrapper {
+    overflow: hidden;
+    flex-wrap: wrap;
+    max-height: 0;
+    flex-basis: 100%;
+    order: 3;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+  }
+  .search-section .options-wrapper * {
+    flex: 1 1;
+  }
+  .search-section .options-wrapper.show {
+    max-height: 5rem;
+    pointer-events: all;
+    min-width: 100%;
+    margin-top: 1rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .user-info-card {
+    align-items: start !important;
+  }
+  .user-info-card .card-header {
+    flex-direction: column !important;
+    gap: 1rem;
+  }
+  .user-info-card .card-header .user-propic-wrapper {
+    width: 100%;
+  }
+  .user-info-card .card-body {
+    flex-direction: column;
+  }
+  .user-info-card .card-body .card-body-section {
+    min-width: unset !important;
+    width: 100% !important;
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
+}/*# sourceMappingURL=breakpoints.css.map */

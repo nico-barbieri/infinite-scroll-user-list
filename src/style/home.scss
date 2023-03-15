@@ -1,0 +1,49 @@
+@import "utilities/variables";
+
+//home
+.landing-container {
+    //compensate nav height
+    margin-top: -4rem;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .landing-wrapper {
+        padding: 2rem;
+        display: flex;
+        gap: 4rem;
+        align-items: stretch;
+        flex-wrap: wrap;
+        max-width: 90rem;
+        .landing-header {
+            flex: 2;
+            min-width: 15rem;
+            h1 {
+                font-weight: 600;
+                font-size: clamp(3.5rem,10vw - 1rem,8rem);
+                line-height: 1.5;
+                span {
+                    font-weight: 100;
+                    border: .25rem solid $primary;
+                    padding: 0 .5ch;
+                }
+            }
+            h2 {
+                margin-top: 1rem;
+                font-weight: 100;
+                font-size: clamp(1.5rem,3vw - 1rem,5rem);
+            }
+        }
+        .landing-desc {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            min-width: 15rem;
+            font-weight: 100;
+            border-left: 1px solid $primary;
+            padding-left: 2rem;
+            font-size: clamp(1rem,1.75vw - .25rem,2rem);
+        }
+    }
+}

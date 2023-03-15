@@ -1,0 +1,252 @@
+.search-section {
+  position: fixed;
+  top: 4rem;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background: #14171f;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  gap: 1rem;
+  padding: 1rem;
+  z-index: 100;
+}
+.search-section * {
+  flex: 1 1;
+}
+.search-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  height: 1px;
+  width: 90%;
+  background: #f5f4f2;
+  opacity: 0.66;
+}
+.search-section .options-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 3;
+  gap: 1rem;
+}
+.search-section input,
+.search-section button,
+.search-section select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.125rem 1ch;
+  border: 1px solid #f5f4f2;
+  border-radius: 0;
+  outline: transparent;
+  color: #f5f4f2;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.search-section input svg,
+.search-section button svg,
+.search-section select svg {
+  margin: 0 1ch;
+  max-height: 2ch;
+  max-width: 2ch;
+}
+.search-section input svg *,
+.search-section button svg *,
+.search-section select svg * {
+  stroke: #f5f4f2;
+  transition: all 0.2s ease-in-out;
+}
+.search-section input::-moz-placeholder, .search-section button::-moz-placeholder, .search-section select::-moz-placeholder {
+  color: #f5f4f2;
+  opacity: 0.66;
+}
+.search-section input:-ms-input-placeholder, .search-section button:-ms-input-placeholder, .search-section select:-ms-input-placeholder {
+  color: #f5f4f2;
+  opacity: 0.66;
+}
+.search-section input::placeholder,
+.search-section button::placeholder,
+.search-section select::placeholder {
+  color: #f5f4f2;
+  opacity: 0.66;
+}
+.search-section input:hover,
+.search-section button:hover,
+.search-section select:hover {
+  color: hwb(220 32% 12%);
+  border-color: hwb(220 32% 12%);
+}
+.search-section input:hover input::-moz-placeholder, .search-section button:hover input::-moz-placeholder, .search-section select:hover input::-moz-placeholder {
+  color: hwb(220 32% 12%) !important;
+}
+.search-section input:hover input:-ms-input-placeholder, .search-section button:hover input:-ms-input-placeholder, .search-section select:hover input:-ms-input-placeholder {
+  color: hwb(220 32% 12%) !important;
+}
+.search-section input:hover input::placeholder,
+.search-section button:hover input::placeholder,
+.search-section select:hover input::placeholder {
+  color: hwb(220 32% 12%) !important;
+}
+.search-section input:hover svg *,
+.search-section button:hover svg *,
+.search-section select:hover svg * {
+  stroke: hwb(220 32% 12%);
+}
+.search-section input:focus-within {
+  color: #f5f4f2;
+  background: #262a36;
+  border-color: #f5f4f2;
+}
+.search-section input:focus-within svg * {
+  stroke: hwb(220 32% 12%);
+}
+.search-section select::-ms-expand {
+  display: none;
+}
+.search-section select option {
+  background: #14171f;
+  color: #f5f4f2;
+}
+.search-section button:active {
+  background: #262a36;
+  border-color: #f5f4f2 !important;
+  color: #f5f4f2;
+  transition: 0s;
+}
+.search-section button:active svg * {
+  stroke: #f5f4f2;
+  transition: 0s;
+}
+.search-section .show-options {
+  position: relative;
+  flex: 0 1;
+}
+.search-section .show-options input {
+  width: 2rem;
+  height: 2rem;
+  opacity: 0;
+  z-index: 10;
+}
+.search-section .show-options input:checked ~ svg {
+  rotate: 30deg;
+}
+.search-section .show-options svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.user-cards {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0.5rem;
+}
+.user-cards .user-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10rem;
+  padding: 1rem;
+  background: #14171f;
+  color: #f5f4f2;
+  border: 1px solid #f5f4f2;
+  box-shadow: 0px 10px 15px -2px rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 0.2s;
+}
+.user-cards .user-card:hover {
+  box-shadow: 0px 10px 15px -2px rgba(0, 0, 0, 0.1), inset 0 0.5rem 0 0 hwb(220 32% 12%), inset 0 -0.5rem 0 0 hwb(220 32% 12%);
+}
+.user-cards .user-card:hover .user-propic-wrapper img {
+  scale: 1.05;
+}
+.user-cards .user-card:hover .user-info {
+  position: relative;
+  overflow: hidden;
+}
+.user-cards .user-card:hover .user-info .user-name {
+  position: relative;
+  overflow: visible;
+  text-overflow: unset;
+  -webkit-animation: carousel linear 4s -2s infinite;
+          animation: carousel linear 4s -2s infinite;
+}
+.user-cards .user-card .user-propic-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 8rem;
+  overflow: hidden;
+  border: 2px solid #f5f4f2;
+  border-radius: 50%;
+  margin: 0 0.5rem 1rem 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+.user-cards .user-card .user-propic-wrapper img {
+  opacity: 0.9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: all 0.2s ease-in-out;
+}
+.user-cards .user-card .user-info {
+  width: 100%;
+}
+.user-cards .user-card .user-info .user-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  translate: 0 0;
+  transition: all 0.2s ease-in-out;
+}
+.user-cards .user-card .user-info .user-location {
+  font-size: 0.75rem;
+}
+.user-cards .user-card .user-cta {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: -0.5rem;
+}
+.user-cards .user-card .user-cta .user-email {
+  fill: #f5f4f2;
+  transition: all 0.2s ease-in-out;
+}
+.user-cards .user-card .user-cta .user-email:hover {
+  fill: hwb(220 32% 12%);
+}
+.user-cards .user-card .user-cta button {
+  background: transparent;
+  stroke: #f5f4f2;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.user-cards .user-card .user-cta button:hover {
+  stroke: hwb(220 32% 12%);
+}
+.user-cards .user-card .user-cta svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.loader-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.loader-container svg {
+  margin: 0 auto;
+}/*# sourceMappingURL=users.css.map */

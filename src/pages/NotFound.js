@@ -1,8 +1,10 @@
 import React from 'react'
 
-function NotFound() {
+const NotFound = () => {
   return (
-    <div>Page was not found</div>
+    <div className='page-container'>
+        Page was not found
+    </div>
   )
 }
 

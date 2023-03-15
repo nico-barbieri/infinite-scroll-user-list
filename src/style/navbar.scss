@@ -1,0 +1,73 @@
+@import "utilities/variables";
+
+//navbar
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: $secondary;
+    color: $primary;
+    padding: 1rem 2rem;
+    .navbar-wrapper {
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        .navbar-logo {
+          cursor: pointer;
+          h3 {
+            font-size: 1.5rem;
+            span {
+              font-weight: 300;
+              border: 1px solid $primary;
+              padding: 0 0.5ch;
+            }
+          }
+        }
+        .navbar-links {
+          display: flex;
+          gap: 2ch;
+          align-items: center;
+          li a {
+            display: flex;
+            gap: 0.5ch;
+            align-items: center;
+            span {
+              position: relative;
+              transition: all 0.2s ease-in-out;
+              &::after {
+                content: "";
+                position: absolute;
+                height: 0.25rem;
+                width: 0;
+                bottom: -0.25rem;
+                right: 50%;
+                translate: (50% 0);
+                background: $primary;
+                transition: all 0.2s ease-in-out;
+              }
+  
+              &:hover {
+                &::after {
+                  width: 33%;
+                }
+              }
+            }
+            &.active {
+              span {
+                  color: $accent;
+                  &::after {
+                    background: $accent;
+                    width: 100%;
+                  }
+              }
+            }
+            svg {
+              height: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+  }

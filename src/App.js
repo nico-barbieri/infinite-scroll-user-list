@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 //Style
-import './App.css'
+import './index.css'
 
 //Components
 import Header from './components/Header';
@@ -12,9 +12,8 @@ import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import UserInfo from './pages/UserInfo';
 import UserList from './pages/UserList';
-import Users from './pages/Users';
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Header />

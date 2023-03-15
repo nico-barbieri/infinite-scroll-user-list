@@ -1,0 +1,53 @@
+@import "utilities/variables";
+
+//about
+.about-container {
+    display: flex;
+    justify-content: center;
+    .about-wrapper {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        align-items: stretch;
+        flex-wrap: wrap;
+        max-width: 90rem;
+        .about-header {
+            display: flex;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 2rem;
+            flex: 2;
+            min-width: 15rem;
+            h1 {
+                font-weight: 600;
+                font-size: clamp(3.5rem,10vw - 1rem,8rem);
+                line-height: 1.5;
+                flex: 1;
+                span {
+                    font-weight: 100;
+                    border: .25rem solid $primary;
+                    padding: 0 .5ch;
+                }
+            }
+            h2 {
+                display: flex;
+                align-items: center;
+                margin-top: 1rem;
+                font-weight: 100;
+                font-size: clamp(1.5rem,3vw - 1rem,5rem);
+                border-left: 1px solid $primary;
+                padding-left: 2rem;
+                flex: 1;
+            }
+        }
+        .landing-desc {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            min-width: 15rem;
+            font-weight: 100;
+            font-size: clamp(1rem,1.75vw - .25rem,2rem);
+        }
+    }
+}
