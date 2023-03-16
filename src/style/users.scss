@@ -95,9 +95,6 @@
     }
   
     select {
-      &::-ms-expand {
-        display: none;
-      }
       option {
         background: $secondary;
         color: $primary;

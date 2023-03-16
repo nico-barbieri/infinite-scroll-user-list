@@ -104,9 +104,6 @@
 .search-section input:focus-within svg * {
   stroke: hwb(220 32% 12%);
 }
-.search-section select::-ms-expand {
-  display: none;
-}
 .search-section select option {
   background: #14171f;
   color: #f5f4f2;

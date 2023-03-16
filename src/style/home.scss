@@ -2,10 +2,8 @@
 
 //home
 .landing-container {
-    //compensate nav height
-    margin-top: -4rem;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 4rem); //compensate navbar height
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +19,7 @@
             min-width: 15rem;
             h1 {
                 font-weight: 600;
-                font-size: clamp(3.5rem,10vw - 1rem,8rem);
+                font-size: clamp(3rem,10vw - 1rem,8rem);
                 line-height: 1.5;
                 span {
                     font-weight: 100;

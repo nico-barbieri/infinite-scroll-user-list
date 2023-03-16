@@ -42,7 +42,7 @@
       }
 
       &.show {
-        max-height: 5rem;
+        max-height: 7rem;
         pointer-events: all;
         min-width: 100%;
         margin-top: 1rem;
@@ -53,6 +53,9 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .landing-container, .about-container {
+    height: auto;
+  }
   .user-info-card {
     align-items: start !important;
     .card-header {
