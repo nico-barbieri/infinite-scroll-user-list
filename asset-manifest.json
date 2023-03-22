@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/infinite-scroll-user-list/home/static/css/main.7eb574f0.css",
-    "main.js": "/infinite-scroll-user-list/home/static/js/main.578552ea.js",
-    "static/media/loader.svg": "/infinite-scroll-user-list/home/static/media/loader.3487091f7c46a6b209a217eddadbe473.svg",
-    "static/media/options.svg": "/infinite-scroll-user-list/home/static/media/options.46c657c0b7d0151b5d725447f53f2fbe.svg",
-    "static/media/message.svg": "/infinite-scroll-user-list/home/static/media/message.2dcfa50d1e2d56d8570c1b7c3252d421.svg",
-    "static/media/about.svg": "/infinite-scroll-user-list/home/static/media/about.0aa3a6505cbd14eb9f73a96f3f423abd.svg",
-    "index.html": "/infinite-scroll-user-list/home/index.html",
-    "static/media/user-info.svg": "/infinite-scroll-user-list/home/static/media/user-info.e124c142f5cc8678c5f08fa2eff5b54b.svg",
-    "static/media/home.svg": "/infinite-scroll-user-list/home/static/media/home.c538b0f321dbb5ebd740a0f470aaf4ce.svg",
-    "static/media/search.svg": "/infinite-scroll-user-list/home/static/media/search.41edb144d06b5e4a869a6f97376c2eb0.svg",
-    "main.7eb574f0.css.map": "/infinite-scroll-user-list/home/static/css/main.7eb574f0.css.map",
-    "main.578552ea.js.map": "/infinite-scroll-user-list/home/static/js/main.578552ea.js.map"
+    "main.css": "/infinite-scroll-user-list/static/css/main.7eb574f0.css",
+    "main.js": "/infinite-scroll-user-list/static/js/main.346dfaab.js",
+    "static/media/loader.svg": "/infinite-scroll-user-list/static/media/loader.3487091f7c46a6b209a217eddadbe473.svg",
+    "static/media/options.svg": "/infinite-scroll-user-list/static/media/options.46c657c0b7d0151b5d725447f53f2fbe.svg",
+    "static/media/message.svg": "/infinite-scroll-user-list/static/media/message.2dcfa50d1e2d56d8570c1b7c3252d421.svg",
+    "static/media/about.svg": "/infinite-scroll-user-list/static/media/about.0aa3a6505cbd14eb9f73a96f3f423abd.svg",
+    "index.html": "/infinite-scroll-user-list/index.html",
+    "static/media/user-info.svg": "/infinite-scroll-user-list/static/media/user-info.e124c142f5cc8678c5f08fa2eff5b54b.svg",
+    "static/media/home.svg": "/infinite-scroll-user-list/static/media/home.c538b0f321dbb5ebd740a0f470aaf4ce.svg",
+    "static/media/search.svg": "/infinite-scroll-user-list/static/media/search.41edb144d06b5e4a869a6f97376c2eb0.svg",
+    "main.7eb574f0.css.map": "/infinite-scroll-user-list/static/css/main.7eb574f0.css.map",
+    "main.346dfaab.js.map": "/infinite-scroll-user-list/static/js/main.346dfaab.js.map"
   },
   "entrypoints": [
     "static/css/main.7eb574f0.css",
-    "static/js/main.578552ea.js"
+    "static/js/main.346dfaab.js"
   ]
 }
